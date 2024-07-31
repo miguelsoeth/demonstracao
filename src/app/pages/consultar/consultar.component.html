@@ -1,0 +1,31 @@
+<mat-card class="mat-elevation-z8">
+    <button mat-raised-button color="primary" (click)="openDialog()">
+        Nova Consulta
+    </button>
+
+    <mat-table [dataSource]="itensHistorico" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="numero">
+            <mat-header-cell *matHeaderCellDef>Número</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{ element.numero }}</mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="perfil">
+            <mat-header-cell *matHeaderCellDef>Perfil</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{ element.perfil }}</mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef>Visualizar</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+            <button mat-button (click)="performAction(element)"><mat-icon>visibility</mat-icon></button>
+            </mat-cell>
+        </ng-container>
+        
+        <!-- Header and row definitions -->
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        
+    </mat-table>
+
+</mat-card>

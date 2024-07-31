@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>BUSCAR</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>DOCUMENTO</mat-label>
+    <input matInput [(ngModel)]="infos.numero" type="number">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>NOME DO USUARIO</mat-label>
+    <input matInput [(ngModel)]="infos.perfil" type="text">
+  </mat-form-field>  
+</div>
+
+<p>
+  Exemplos:<br>
+  12345678900<br>
+  23456789011<br>
+  34567890122<br>
+  45678901233<br>
+  56789012344
+</p>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button (click)="onConfirmClick()">OK</button>
+</div>

@@ -1,0 +1,17 @@
+mat-card {
+    text-align: center;
+    height: 70vh;
+    margin: 30px;
+}
+
+.mat-table {
+    width: 100%;
+}
+  
+.mat-header-cell, .mat-cell {
+    text-align: center;
+}
+
+button {
+    margin: 4px;
+}
